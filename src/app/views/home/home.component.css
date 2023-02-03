@@ -1,0 +1,51 @@
+*{
+  text-align: center;
+}
+
+.home-profile-image {
+  width: 400px;
+  height: 300px;
+  border-radius: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.home-profile-image img {
+  width: 100%;
+  height: auto;
+}
+
+.meet {
+  font-size: 2em;
+  padding: 10px 0;
+}
+
+.name {
+  font-size: 3em;
+  font-weight: bolder;
+  padding-bottom: 40px;
+}
+
+p {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+button {
+  margin-top: 10px;
+  font-size: 1.5em;
+  padding: 10px;
+  border-style: none;
+  background-color: #fff;
+  color: gray;
+  transition-duration: 0.4s;
+  border-bottom: 3px solid rgb(174, 174, 174);
+}
+
+button:hover {
+  background-color: #20474c;
+  color: #fff;
+  border-radius: 5%;
+  border-bottom: none;
+}
+

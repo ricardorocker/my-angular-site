@@ -1,0 +1,25 @@
+.default-layout-wrapper {
+  position: relative;
+}
+
+.-side-menu {
+  display: flex;
+}
+
+.-content {
+  position: absolute;
+  left: 260px;
+  width: calc(100% - 260px);
+  padding: 15px;
+  overflow: hidden;
+  overflow-y: auto;
+  height: calc(100vh - 30px);
+}
+
+/* TODO: Mudar para 750px */
+@media (max-width: 650px){
+  .-content {
+    left: 80px;
+    width: calc(100% - 80px);
+  }
+}

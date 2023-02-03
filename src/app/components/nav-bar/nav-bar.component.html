@@ -1,0 +1,20 @@
+<nav class="navbar-container">
+
+  <div class="navbar-profile-image">
+    <img src="../../../assets/profile.jpg" alt="Rocker">
+  </div>
+
+  <div class="navbar-description-profile">
+    <div class="navbar-name">Ricardo Rocker</div>
+    <div class="navbar-role">ANGULAR DEVELOPER</div>
+  </div>
+
+  <ul>
+    <li *ngFor="let page of pages" class="navbar-item">
+      <a [routerLink]="[page.route]">
+        {{ page.name | uppercase}}
+      </a>
+    </li>
+  </ul>
+
+</nav>

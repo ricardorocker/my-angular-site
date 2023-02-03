@@ -1,0 +1,79 @@
+.navbar-container {
+  position: fixed;
+  width: 260px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding-top: 20px;
+  text-align: center;
+  background-color: #20474c;
+  color: #fff;
+  box-shadow: -1px -2px 15px 0px rgba(0, 0, 0, 50%)
+}
+
+.navbar-profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.navbar-profile-image img {
+  width: 100%;
+  height: auto;
+}
+
+.navbar-description-profile {
+  padding: 30px 0;
+}
+
+.navbar-name {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.navbar-role {
+  font-weight: lighter;
+  font-size: 1.2em;
+}
+
+.navbar-item {
+  padding: 8px 16px;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.navbar-item a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+
+/* TODO: Mudar para 750px */
+@media (max-width: 650px) {
+  .navbar-container {
+    width: 80px;
+    padding-top: 0;
+  }
+
+  .navbar-profile-image {
+    display: none;
+  }
+
+  .navbar-name {
+    font-size: 1.3em;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+
+  .navbar-role {
+    font-weight: lighter;
+    font-size: 0.8em;
+  }
+
+  .navbar-item {
+    padding: 8px 2px;
+    font-size: 0.8em;
+  }
+}
