@@ -1,11 +1,30 @@
+.about-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 50px;
+  background-color: #fafafa;
+}
+
+.description {
+  text-align: left;
+  margin-right: 50px;
+}
+
+.name {
+  font-size: 2.7em;
+}
+
+.role {
+  font-size: 1.5em;
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+
 .home-profile-image {
-  /* width: 400px;
-  height: 300px; */
   width: 360px;
   height: 270px;
-  border-radius: 100%;
   overflow: hidden;
-  margin: 0 auto;
 }
 
 .home-profile-image img {
@@ -13,23 +32,24 @@
   height: auto;
 }
 
-.meet {
-  font-size: 1.8em;
-  padding: 10px 0;
+.overview-section {
+  padding: 50px;
 }
 
-.name {
-  font-size: 2.7em;
-  font-weight: bolder;
-  margin-bottom: 40px;
+.overview-title {
+  font-size: 2em;
+  margin-bottom: 20px;
 }
 
 p {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+.more-about-me {
+  text-align: center;
 }
 
 button {
-  margin-top: 10px;
   font-size: 1.3em;
   padding: 10px;
   border-style: none;
@@ -44,5 +64,37 @@ button:hover {
   color: #fff;
   border-radius: 5%;
   border-bottom: none;
+}
+
+@media ( max-width: 650px ) {
+  .home-profile-image {
+    display: none;
+  }
+
+  .about-section {
+    padding: 20px;
+  }
+
+  .name{
+    font-size: 2.4em;
+  }
+
+  .role{
+    font-size: 1.3em;
+  }
+
+  .description {
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .overview-section {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .overview-title{
+    font-size: 1.7em;
+  }
 }
 

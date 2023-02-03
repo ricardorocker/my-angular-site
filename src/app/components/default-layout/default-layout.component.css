@@ -9,8 +9,7 @@
 .-content {
   position: absolute;
   left: 240px;
-  padding: 15px;
-  width: calc(100% - 270px);
+  width: calc(100% - 240px);
   overflow: hidden;
   overflow-y: auto;
   height: calc(100vh - 30px);
@@ -20,6 +19,7 @@
 @media (max-width: 650px){
   .-content {
     left: 80px;
-    width: calc(100% - 110px);
+    padding: 15px;
+    width: calc(100% - 80px);
   }
 }

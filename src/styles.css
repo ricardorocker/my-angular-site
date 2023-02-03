@@ -6,17 +6,18 @@
 
 .default-component {
   text-align: center;
+  margin: 50px;
 }
 
-/* To test layout
- border-style: solid;
-*/
+.title {
+  font-weight: bolder;
+  color: #292929;
+}
 
 .title-page {
   font-size: 1.8em;
-  font-weight: bolder;
   text-transform: uppercase;
-  margin: 15px 0px 30px;
+  margin-bottom: 30px;
 }
 
 /* TIP CSS
@@ -31,4 +32,14 @@ Margin/Padding can has:
 
 .content-text {
   font-size: 1.3em;
+}
+
+@media (max-width: 650px) {
+  .default-component {
+    margin: 10px;
+  }
+
+  .title title-page {
+    font-size: 1.4em;
+  }
 }
