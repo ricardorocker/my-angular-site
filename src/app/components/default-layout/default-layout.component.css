@@ -8,18 +8,18 @@
 
 .-content {
   position: absolute;
-  left: 260px;
-  width: calc(100% - 260px);
+  left: 240px;
   padding: 15px;
+  width: calc(100% - 270px);
   overflow: hidden;
   overflow-y: auto;
   height: calc(100vh - 30px);
 }
 
-/* TODO: Mudar para 750px */
+/* TODO: Mudar para m-w:750px e criar lógica de icones */
 @media (max-width: 650px){
   .-content {
     left: 80px;
-    width: calc(100% - 80px);
+    width: calc(100% - 110px);
   }
 }
