@@ -1,3 +1,4 @@
+import { ReactiveFormsComponent } from './views/projects/reactive-forms/reactive-forms.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -13,7 +14,12 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'experience', component: ExperienceComponent },
-  { path: 'projects', component: ProjectsComponent },
+  {
+    path: 'projects', component: ProjectsComponent, children: [
+      { path: 'reactive-forms', component: ReactiveFormsComponent }
+    ]
+
+  },
   { path: 'skills', component: SkillsComponent },
   { path: 'education', component: EducationComponent },
   { path: 'contact', component: ContactComponent }

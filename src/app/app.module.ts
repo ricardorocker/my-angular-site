@@ -1,3 +1,4 @@
+import { ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -12,6 +13,7 @@ import { EducationComponent } from './views/education/education.component';
 import { ContactComponent } from './views/contact/contact.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { DefaultLayoutComponent } from './components/default-layout/default-layout.component';
+import { ReactiveFormsComponent } from './views/projects/reactive-forms/reactive-forms.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +26,13 @@ import { DefaultLayoutComponent } from './components/default-layout/default-layo
     EducationComponent,
     ContactComponent,
     NavBarComponent,
-    DefaultLayoutComponent
+    DefaultLayoutComponent,
+    ReactiveFormsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
