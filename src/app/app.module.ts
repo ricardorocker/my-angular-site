@@ -11,6 +11,7 @@ import { SkillsComponent } from './views/skills/skills.component';
 import { EducationComponent } from './views/education/education.component';
 import { ContactComponent } from './views/contact/contact.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { DefaultLayoutComponent } from './components/default-layout/default-layout.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
     SkillsComponent,
     EducationComponent,
     ContactComponent,
-    NavBarComponent
+    NavBarComponent,
+    DefaultLayoutComponent
   ],
   imports: [
     BrowserModule,
