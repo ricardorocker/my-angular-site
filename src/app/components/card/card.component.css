@@ -1,6 +1,10 @@
 .card {
   width: 320px;
-  height: 450px;
+  /* height: 450px; */
+  height: fit-content;
+  padding-bottom: 16px;
+  margin-right: 16px;
+  margin-bottom: 16px;
   background-color: #fbfbfb;
   border-radius: 8px;
   display: flex;
@@ -33,16 +37,28 @@
 }
 
 .card-title h3 {
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
+  font-size: 1.2rem;
   font-weight: 700;
-  color: #222222;
+  /* color: #222222; */
+  color: #808080;
   margin: 0;
 }
 
 .card-content {
-  padding: 0px;
-  width: 100%;
+  padding-left: 26px;
+  /* width: 100%; */
+  width: 80%;
   height: 30%;
-  font-size: 1.2rem;
+  text-align: left;
+  /* font-size: 1.2rem; */
+  font-size: 1rem;
   color: #222222;
+}
+
+@media (max-width: 750px) {
+  .card {
+    margin: 0 auto;
+    margin-bottom: 16px;
+  }
 }

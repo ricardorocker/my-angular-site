@@ -20,19 +20,35 @@
   margin-bottom: 30px;
 }
 
-/* TIP CSS
-Margin/Padding can has:
-- 4 values
-( top ; right ; bottom ; left )
-- 3 values
-( top ; right and left ; bottom )
-- 2 values
-( top and bottom ; right and left )
-*/
-
 .content-text {
   font-size: 1.3em;
 }
+
+.button {
+  font-size: 1.3em;
+  padding: 10px;
+  border-style: none;
+  background-color: #fff;
+  color: gray;
+  transition-duration: 0.4s;
+  border-bottom: 3px solid rgb(174, 174, 174);
+}
+
+.button:hover {
+  background-color: #20474c;
+  color: #fff;
+  border-radius: 5%;
+  border-bottom: none;
+  cursor: pointer;
+}
+
+.code {
+  font-size: 0.9rem;
+  color: #2f3337;
+  background-color: #f6f6f6;
+  padding: 6px;
+}
+
 
 @media (max-width: 750px) {
   .default-component {

@@ -51,23 +51,6 @@ p {
   text-align: center;
 }
 
-button {
-  font-size: 1.3em;
-  padding: 10px;
-  border-style: none;
-  background-color: #fff;
-  color: gray;
-  transition-duration: 0.4s;
-  border-bottom: 3px solid rgb(174, 174, 174);
-}
-
-button:hover {
-  background-color: #20474c;
-  color: #fff;
-  border-radius: 5%;
-  border-bottom: none;
-}
-
 @media (max-width: 1000px) {
   .about-section {
     flex-direction: column;

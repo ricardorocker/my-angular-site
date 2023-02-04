@@ -3,8 +3,49 @@
   <div class="test">
 
     <div class="brief-subject">
-      <app-card [title]="'Reactive Forms'">
-        <span style="font-weight: bold;">Using Forms</span>
+      <app-card [title]="'Using Forms'" [hasImage]="false">
+        <P>Controller</P>
+        <ul>
+          <li>initialize formBuilder in constructor</li>
+          <div class="code">constructor(<br>
+            private formBuilder: FormBuilder)</div>
+          <li>declare a FormGroup prop, to receive a formBuilder</li>
+        </ul>
+        <div class="code">
+          <p>
+            public cadastroForm: FormGroup = this.formBuilder.group({{ '{' }}<br>
+            &nbsp; firstName: ['']<br>
+            })
+          </p>
+        </div>
+        <br>
+        <p>Template:</p>
+        <ul>
+          <li>create form with formGroup and ngSubmit to submitButton</li>
+          <div class="code">
+            <div><span>&lt;</span><span>form</span>
+              <span>[formGroup]</span>=<span>"</span><span>cadastroForm</span><span>"</span>
+              <span>(ngSubmit)</span>=<span>"</span><span>submitForm</span>()<span>"</span><span>&gt;</span>
+            </div>
+          </div>
+          <li>use formControlName in inputs to bind values</li>
+          <div class="code">
+            <span>&lt;</span><span>input</span><span> type</span>=<span>"text"</span>
+            <span> formControlName</span>=<span>"firstName"</span><span>&gt;</span>
+          </div>
+        </ul>
+      </app-card>
+    </div>
+    <div class="brief-subject">
+      <app-card [title]="'Validators'" [hasImage]="false">
+        <ul>
+          <li>import Validators to insert in control</li>
+          <div class="code">['', Validators.required]</div>
+          <li>can show a span using ngIf</li>
+          <div class="code">*ngIf form.get('name')?.errors</div>
+          <li>can use:</li>
+          <div class="code">value || errors || touched || dirty</div>
+        </ul>
       </app-card>
     </div>
 
@@ -33,4 +74,3 @@
   </div>
 
 </div>
-
