@@ -1,0 +1,12 @@
+.test {
+  display: flex;
+  width: 100%;
+}
+
+.brief-subject {
+  width: 320;
+}
+
+.code-subject {
+  width: 100%;
+}

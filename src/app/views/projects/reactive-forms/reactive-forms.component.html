@@ -1,30 +1,36 @@
 <div class="default-component">
-  <div class="title">Reactive Forms</div>
 
-  <form [formGroup]="cadastroForm" (ngSubmit)="submitForm()">
+  <div class="test">
 
-    <label>
-      Nome:
-      <input type="text" formControlName="firstName" required>
+    <div class="brief-subject">
+      <app-card [title]="'Reactive Forms'">
+        <span style="font-weight: bold;">Using Forms</span>
+      </app-card>
+    </div>
 
-      <span *ngIf="cadastroForm.get('firstName')?.errors && cadastroForm.get('firstName')?.touched">
-        Favor adicionar o nome
-      </span>
-    </label>
+    <div class="code-subject">
+      <form [formGroup]="cadastroForm" (ngSubmit)="submitForm()">
+        <label>
+          Nome:
+          <input type="text" formControlName="firstName" required>
+          <span *ngIf="cadastroForm.get('firstName')?.errors && cadastroForm.get('firstName')?.touched">
+            Favor adicionar o nome
+          </span>
+        </label>
+        <br><br>
+        <label>
+          Sobrenome:
+          <input type="text" formControlName="lastName">
+        </label>
+        <p>value: {{ cadastroForm.get('firstName')?.value }}</p>
+        <p>errors: {{ cadastroForm.get('firstName')?.errors | json }}</p>
+        <p>touched: {{ cadastroForm.get('firstName')?.touched | json }}</p>
+        <p>dirty: {{ cadastroForm.get('firstName')?.dirty | json }}</p>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
 
-    <br>
+  </div>
 
-    <label>
-      Sobrenome:
-      <input type="text" formControlName="lastName">
-    </label>
-
-    <p>value: {{ cadastroForm.get('firstName')?.value }}</p>
-    <p>errors: {{ cadastroForm.get('firstName')?.errors | json }}</p>
-    <p>touched: {{ cadastroForm.get('firstName')?.touched | json }}</p>
-    <p>dirty: {{ cadastroForm.get('firstName')?.dirty | json }}</p>
-
-    <button type="submit">Enviar</button>
-
-  </form>
 </div>
+
