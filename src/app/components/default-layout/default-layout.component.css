@@ -16,10 +16,10 @@
 }
 
 /* TODO: Mudar para m-w:750px e criar lógica de icones */
-@media (max-width: 650px){
+@media (max-width: 750px){
   .-content {
     left: 80px;
     padding: 15px;
-    width: calc(100% - 80px);
+    width: calc(100% - 110px);
   }
 }

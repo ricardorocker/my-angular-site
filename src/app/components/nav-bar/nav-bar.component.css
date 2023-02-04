@@ -52,29 +52,36 @@
 }
 
 /* TODO: Mudar para m-w:750px e criar lógica de icones */
-@media (max-width: 650px) {
+@media (max-width: 750px) {
   .navbar-container {
     width: 80px;
-    padding-top: 0;
   }
 
   .navbar-profile-image {
-    display: none;
+    width: 70px;
+    height: 70px;
+  }
+
+  .navbar-description-profile {
+    padding: 15px 0px 30px 0px;
   }
 
   .navbar-name {
-    font-size: 1.3em;
-    font-weight: bold;
+    font-size: 1em;
     padding-bottom: 10px;
+    text-transform: uppercase;
   }
 
   .navbar-role {
-    font-weight: lighter;
-    font-size: 0.8em;
+    font-size: 0.7em;
   }
 
   .navbar-item {
     padding: 8px 2px;
-    font-size: 0.8em;
+    font-size: 0.7em;
+  }
+
+  .icons {
+    max-width: 30px;
   }
 }

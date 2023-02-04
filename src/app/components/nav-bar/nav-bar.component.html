@@ -12,7 +12,11 @@
   <ul>
     <li *ngFor="let page of pages" class="navbar-item">
       <a [routerLink]="[page.route]">
-        {{ page.name | uppercase}}
+        <img *ngIf="smallScreen; else desktop" [src]="page.icon" [title]="page.name"
+        [alt]="page.name" class="icons">
+        <ng-template #desktop>
+          {{ page.name | uppercase}}
+        </ng-template>
       </a>
     </li>
   </ul>

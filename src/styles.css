@@ -34,7 +34,7 @@ Margin/Padding can has:
   font-size: 1.3em;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 750px) {
   .default-component {
     margin: 10px;
   }

@@ -1,19 +1,39 @@
-import { Component } from '@angular/core';
+import { Component, DoCheck, NgZone, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.css']
 })
-export class NavBarComponent {
-  pages: Array<{route: string, name:string}> = [
-    {route: '/', name: 'Home'},
-    {route: '/about', name: 'About'},
-    {route: '/experience', name: 'Experience'},
-    {route: '/projects', name: 'Projects'},
-    {route: '/skills', name: 'Skills'},
-    {route: '/education', name: 'Education'},
-    {route: '/contact', name: 'Contact'},
+export class NavBarComponent implements OnInit {
+  smallScreen: boolean = false;
+
+  pages: Array<{ route: string, name: string, icon: string }> = [
+    { route: '/', name: 'Home', icon: '../../../assets/home.png' },
+    { route: '/about', name: 'About', icon: '../../../assets/about.png' },
+    { route: '/experience', name: 'Experience', icon: '../../../assets/experience.png' },
+    { route: '/projects', name: 'Projects', icon: '../../../assets/project.png' },
+    { route: '/skills', name: 'Skills', icon: '../../../assets/skills.png' },
+    { route: '/education', name: 'Education', icon: '../../../assets/education.png' },
+    { route: '/contact', name: 'Contact', icon: '../../../assets/contact.png' },
   ]
 
+  constructor(private ngZone: NgZone) { }
+
+  ngOnInit(): void {
+    this.verifySize();
+    this.verifyResize();
+  }
+
+  verifySize(): void {
+    window.innerWidth < 750 ? this.smallScreen = true : this.smallScreen = false;
+  }
+
+  verifyResize(): void {
+    window.onresize = () => {
+      this.ngZone.run(() => {
+        this.verifySize();
+      })
+    }
+  }
 }

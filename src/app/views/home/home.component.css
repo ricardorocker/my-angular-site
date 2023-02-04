@@ -8,6 +8,7 @@
 
 .description {
   text-align: left;
+  width: 60%;
   margin-right: 50px;
 }
 
@@ -22,8 +23,9 @@
 }
 
 .home-profile-image {
-  width: 360px;
-  height: 270px;
+  width: 30%;
+  max-width: 500px;
+  min-width: 300px;
   overflow: hidden;
 }
 
@@ -66,35 +68,55 @@ button:hover {
   border-bottom: none;
 }
 
-@media ( max-width: 650px ) {
-  .home-profile-image {
-    display: none;
-  }
-
+@media (max-width: 1000px) {
   .about-section {
-    padding: 20px;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .name{
+  .description {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .home-profile-image {
+    width: 60%;
+  }
+}
+
+@media (max-width: 750px) {
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+  }
+
+  .name {
     font-size: 2.4em;
   }
 
-  .role{
+  .role {
     font-size: 1.3em;
   }
 
   .description {
     text-align: center;
     margin-right: 0;
+    width: 100%;
+  }
+
+  .home-profile-image {
+    width: 70%;
+    min-width: 100px;
   }
 
   .overview-section {
-    padding: 20px;
     text-align: center;
+    padding: 20px;
   }
 
-  .overview-title{
+  .overview-title {
     font-size: 1.7em;
   }
 }
-
