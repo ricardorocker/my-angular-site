@@ -7,6 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./reactive-forms.component.css']
 })
 export class ReactiveFormsComponent {
+  isSubmitted: boolean = false;
 
   constructor(private formBuilder: FormBuilder) { }
 
@@ -16,7 +17,9 @@ export class ReactiveFormsComponent {
   })
 
   public submitForm() {
-    console.log(this.cadastroForm);
+    this.isSubmitted = true;
+    if(this.cadastroForm.valid){
+      console.log(this.cadastroForm);
+    }
   }
-
 }

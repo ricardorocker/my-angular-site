@@ -52,23 +52,30 @@
     <div class="code-subject">
       <form [formGroup]="cadastroForm" (ngSubmit)="submitForm()">
         <label>
-          Nome:
+          Nome<strong>*</strong> :
           <input type="text" formControlName="firstName" required>
-          <span *ngIf="cadastroForm.get('firstName')?.errors && cadastroForm.get('firstName')?.touched">
+          <span *ngIf="cadastroForm.get('firstName')?.errors && cadastroForm.get('firstName')?.touched"
+          class="alert">
+          <!-- <span  class="alert"> -->
             Favor adicionar o nome
           </span>
         </label>
         <br><br>
         <label>
-          Sobrenome:
+          Sobrenome :
           <input type="text" formControlName="lastName">
         </label>
-        <p>value: {{ cadastroForm.get('firstName')?.value }}</p>
+        <!-- <p>value: {{ cadastroForm.get('firstName')?.value }}</p>
         <p>errors: {{ cadastroForm.get('firstName')?.errors | json }}</p>
         <p>touched: {{ cadastroForm.get('firstName')?.touched | json }}</p>
-        <p>dirty: {{ cadastroForm.get('firstName')?.dirty | json }}</p>
-        <button type="submit">Enviar</button>
+        <p>dirty: {{ cadastroForm.get('firstName')?.dirty | json }}</p> -->
+
+        <div class="submit-container">
+          <button type="submit" [disabled]="cadastroForm.invalid">Enviar</button>
+        </div>
+
       </form>
+      <div *ngIf="isSubmitted">{{ cadastroForm.value | json }}</div>
     </div>
 
   </div>

@@ -11,6 +11,31 @@
   width: 100%;
 }
 
+input {
+  padding: 4px;
+}
+
+span {
+  margin-top: 2px;
+  width: 200px;
+}
+
+.alert {
+  background-color: #ff5c5c;
+  color: #fff;
+  padding: 4px;
+  margin: 4px;
+  font-size: 0.8rem;
+}
+
+.submit-container {
+  padding: 20px;
+}
+
+button {
+  padding: 5px 10px;
+}
+
 @media (max-width: 750px) {
   .test {
     display: inline;
