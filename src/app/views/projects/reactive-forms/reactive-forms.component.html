@@ -47,6 +47,21 @@
           <div class="code">value || errors || touched || dirty</div>
         </ul>
       </app-card>
+      <app-card [title]="'Valid and Invalid'" [hasImage]="false">
+        <ul>
+          <li>use Disabled attribute to with invalid control form</li>
+          <div class="code">
+            <span>&lt;</span><span>button </span> <span>type</span>=<span>"submit"</span>
+            <span>[disabled]</span>=<span>"</span><span>cadastroForm</span>.<span>invalid</span><span>"</span><span>&gt;</span>
+          </div>
+          <li>use valid control to do a condition before make request</li>
+          <div class="code">
+            <div><span>if</span>(<span>this</span>.<span>cadastroForm</span>.<span>valid</span>){{ '{' }}</div>
+              <div><span>&nbsp; this.service.makePost(this.form)...</span></div>
+              <div>}</div>
+          </div>
+        </ul>
+      </app-card>
     </div>
 
     <div class="code-subject">
@@ -54,9 +69,8 @@
         <label>
           Nome<strong>*</strong> :
           <input type="text" formControlName="firstName" required>
-          <span *ngIf="cadastroForm.get('firstName')?.errors && cadastroForm.get('firstName')?.touched"
-          class="alert">
-          <!-- <span  class="alert"> -->
+          <span *ngIf="cadastroForm.get('firstName')?.errors && cadastroForm.get('firstName')?.touched" class="alert">
+            <!-- <span  class="alert"> -->
             Favor adicionar o nome
           </span>
         </label>
@@ -75,7 +89,9 @@
         </div>
 
       </form>
+
       <div *ngIf="isSubmitted">{{ cadastroForm.value | json }}</div>
+
     </div>
 
   </div>
