@@ -2,6 +2,7 @@
 
   <div class="test">
 
+    <!-- CARDS EXPLAIN ----------------------------------------------------------------------------------------- -->
     <div class="brief-subject">
       <app-card [title]="'Using Forms'" [hasImage]="false">
         <P>Controller</P>
@@ -45,8 +46,24 @@
           <div class="code">*ngIf form.get('name')?.errors</div>
           <li>can use:</li>
           <div class="code">value || errors || touched || dirty</div>
+          <li>email, maxLength and minLength</li>
+          <div class="code">
+            <span>email</span><span>:</span> ['', [<span>Validators</span>.<span>email, Validators.minLength(4),&nbsp;
+              Validators.maxLength(9)</span>]],
+          </div>
+          <li>use controls validators to show how many letters need and how many currently have:</li>
+          <div class="code">
+            "Conter no m&iacute;nimo" {{<span>form</span>.<span>get</span>(<span>"lastName"</span>
+            )?.<span>errors</span>?.[<span>'minlength'</span>]?.<span>requiredLength</span>}}
+          </div>
+          <div class="code">
+            "letras e atualmente possui" {{<span>form</span>.<span>get</span>(<span>"lastName"</span>
+            )?.<span>errors</span>?.[<span>'minlength'</span>]?.<span>actualLength</span>}}
+          </div>
         </ul>
       </app-card>
+    </div>
+    <div class="brief-subject">
       <app-card [title]="'Valid and Invalid'" [hasImage]="false">
         <ul>
           <li>use Disabled attribute to with invalid control form</li>
@@ -57,28 +74,43 @@
           <li>use valid control to do a condition before make request</li>
           <div class="code">
             <div><span>if</span>(<span>this</span>.<span>cadastroForm</span>.<span>valid</span>){{ '{' }}</div>
-              <div><span>&nbsp; this.service.makePost(this.form)...</span></div>
-              <div>}</div>
+            <div><span>&nbsp; this.service.makePost(this.form)...</span></div>
+            <div>}</div>
           </div>
         </ul>
       </app-card>
     </div>
 
+
+    <!-- CODE PRATICING -----------------------------------------------------------------------------------------  -->
     <div class="code-subject">
       <form [formGroup]="cadastroForm" (ngSubmit)="submitForm()">
         <label>
           Nome<strong>*</strong> :
           <input type="text" formControlName="firstName" required>
           <span *ngIf="cadastroForm.get('firstName')?.errors && cadastroForm.get('firstName')?.touched" class="alert">
-            <!-- <span  class="alert"> -->
             Favor adicionar o nome
           </span>
         </label>
         <br><br>
         <label>
-          Sobrenome :
+          Sobrenome<strong>*</strong> :
           <input type="text" formControlName="lastName">
+          <span *ngIf="cadastroForm.get('lastName')?.errors && cadastroForm.get('lastName')?.touched" class="alert">
+            Favor deve no mínimo {{ cadastroForm.get("lastName")?.errors?.['minlength']?.requiredLength }} letras
+            e atualmente possui {{ cadastroForm.get("lastName")?.errors?.['minlength']?.actualLength }}
+          </span>
         </label>
+        <br><br>
+        <label>
+          Email<strong>*</strong> :
+          <input type="email" formControlName="email">
+          <span class="alert" *ngIf="cadastroForm.get('email')?.errors && cadastroForm.get('email')?.touched">
+            {{ cadastroForm.get('email')?.errors | json }}
+          </span>
+        </label>
+        <br><br>
+
         <!-- <p>value: {{ cadastroForm.get('firstName')?.value }}</p>
         <p>errors: {{ cadastroForm.get('firstName')?.errors | json }}</p>
         <p>touched: {{ cadastroForm.get('firstName')?.touched | json }}</p>

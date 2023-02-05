@@ -13,7 +13,8 @@ export class ReactiveFormsComponent {
 
   public cadastroForm: FormGroup = this.formBuilder.group({
     firstName: ['', Validators.required],
-    lastName: ['']
+    lastName: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(9)]],
+    email: ['', [Validators.required, Validators.email]],
   })
 
   public submitForm() {
@@ -21,5 +22,9 @@ export class ReactiveFormsComponent {
     if(this.cadastroForm.valid){
       console.log(this.cadastroForm);
     }
+
+    console.log(this.cadastroForm);
+
+    console.log(this.cadastroForm.get('lastName')?.errors?.['minLength']?.requiredLength);
   }
 }
