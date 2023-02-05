@@ -28,17 +28,15 @@
   font-size: 1.3em;
   padding: 10px;
   border-style: none;
-  background-color: #fff;
-  color: gray;
+  border-radius: 5%;
+  background-color: #1a97a8;
+  color: white;
   transition-duration: 0.4s;
-  border-bottom: 3px solid rgb(174, 174, 174);
 }
 
 .button:hover {
   background-color: #20474c;
   color: #fff;
-  border-radius: 5%;
-  border-bottom: none;
   cursor: pointer;
 }
 

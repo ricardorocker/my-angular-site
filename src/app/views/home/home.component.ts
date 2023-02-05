@@ -10,8 +10,8 @@ export class HomeComponent {
 
   constructor(private router: Router) {}
 
-  goToAboutMe(): void {
-    this.router.navigate(['/about']);
+  goToStudies(): void {
+    this.router.navigate(['/projects']);
   }
 
 }

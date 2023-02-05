@@ -96,7 +96,10 @@
         <label>
           Sobrenome<strong>*</strong> :
           <input type="text" formControlName="lastName">
-          <span *ngIf="cadastroForm.get('lastName')?.errors && cadastroForm.get('lastName')?.touched" class="alert">
+          <span class="alert" *ngIf="cadastroForm.get('lastName')?.errors?.['required'] && cadastroForm.get('lastName')?.touched">
+            Campo obrigatório
+          </span>
+          <span *ngIf="cadastroForm.get('lastName')?.errors?.['minLength'] && cadastroForm.get('lastName')?.touched" class="alert">
             Favor deve no mínimo {{ cadastroForm.get("lastName")?.errors?.['minlength']?.requiredLength }} letras
             e atualmente possui {{ cadastroForm.get("lastName")?.errors?.['minlength']?.actualLength }}
           </span>

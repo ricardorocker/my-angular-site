@@ -1,4 +1,4 @@
-import { Component, DoCheck, NgZone, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, NgZone, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-nav-bar',
@@ -12,7 +12,7 @@ export class NavBarComponent implements OnInit {
     { route: '/', name: 'Home', icon: '../../../assets/home.png' },
     { route: '/about', name: 'About', icon: '../../../assets/about.png' },
     { route: '/experience', name: 'Experience', icon: '../../../assets/experience.png' },
-    { route: '/projects', name: 'Projects', icon: '../../../assets/project.png' },
+    { route: '/projects', name: 'Studies', icon: '../../../assets/project.png' },
     { route: '/skills', name: 'Skills', icon: '../../../assets/skills.png' },
     { route: '/education', name: 'Education', icon: '../../../assets/education.png' },
     { route: '/contact', name: 'Contact', icon: '../../../assets/contact.png' },
