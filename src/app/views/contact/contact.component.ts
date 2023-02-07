@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
 
+  onSubmit(): void{
+    window.alert('Work in progress...')
+  }
+
 }
