@@ -39,8 +39,13 @@
   font-size: 1.1em;
 }
 
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
 .navbar-item {
-  padding: 8px 16px;
+  padding: 8px 0;
   font-size: 1.1em;
   margin-bottom: 5px;
 }
