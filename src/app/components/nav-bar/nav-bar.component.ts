@@ -10,7 +10,7 @@ export class NavBarComponent implements OnInit {
 
   pages: Array<{ route: string, name: string, icon: string }> = [
     { route: '/', name: 'Home', icon: '../../../assets/home.png' },
-    { route: '/about', name: 'About', icon: '../../../assets/about.png' },
+    // { route: '/about', name: 'About', icon: '../../../assets/about.png' },
     { route: '/experience', name: 'Experience', icon: '../../../assets/experience.png' },
     { route: '/projects', name: 'Studies', icon: '../../../assets/project.png' },
     { route: '/skills', name: 'Skills', icon: '../../../assets/skills.png' },

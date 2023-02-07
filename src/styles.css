@@ -47,6 +47,17 @@
   padding: 6px;
 }
 
+.social-media {
+  text-transform: uppercase;
+  color: #1a97a8;
+  text-decoration: none;
+}
+
+.social-media:hover {
+  color: #20474c;
+  cursor: pointer;
+}
+
 
 @media (max-width: 750px) {
   .default-component {

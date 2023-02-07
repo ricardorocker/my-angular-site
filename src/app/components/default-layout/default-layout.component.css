@@ -12,7 +12,7 @@
   width: calc(100% - 240px);
   overflow: hidden;
   overflow-y: auto;
-  height: calc(100vh - 30px);
+  padding-bottom: 30px;
 }
 
 /* TODO: Mudar para m-w:750px e criar lógica de icones */
