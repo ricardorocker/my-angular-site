@@ -2,8 +2,21 @@
   <div class="title title-page">
     Skills
   </div>
-  <div class="content-tex">
-    Work in progress...
-  </div>
-</div>
 
+  <div class="container">
+    <div class="card">
+      <div class="row">
+        <div class="col-lg-6" *ngFor="let skill of skills">
+          <div class="card-body" *ngIf="skill.canShow">
+            <div class="title-skill">
+              <fa-icon [icon]="skill.icon" class="me-2"></fa-icon>
+              {{ skill.name }}
+            </div>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" [ngStyle]="{'width': skill.level + '%'}"
+                aria-valuemin="0" aria-valuemax="100">{{ skill.level }}%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
