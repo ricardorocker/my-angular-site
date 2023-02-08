@@ -16,6 +16,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { DefaultLayoutComponent } from './components/default-layout/default-layout.component';
 import { ReactiveFormsComponent } from './views/projects/reactive-forms/reactive-forms.component';
 import { CardComponent } from './components/card/card.component';
+import { NewComponent } from './components/new/new.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CardComponent } from './components/card/card.component';
     NavBarComponent,
     DefaultLayoutComponent,
     ReactiveFormsComponent,
-    CardComponent
+    CardComponent,
+    NewComponent
   ],
   imports: [
     BrowserModule,
