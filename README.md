@@ -1,27 +1,12 @@
-# Rocker
+# Meu site
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.1.
+https://ricardorocker.com/
 
-## Development server
+Desenvolvi meu site usando o Typescript para criar o código-fonte. Além disso, usei vários pipes operators, interpolations, lifecycle hooks, ngIf, ngFor, ngClass, ng-template, router-oulet, child routes, reactive forms, reusable components, biblioteca da fontAwesome para icones e Bootstrap para estilizar.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Além de desenvolver o site, criei uma página chamada "STUDIES" para acompanhar os meus estudos. Nesta página, usei cards para escrever resumos dos assuntos que estudo e coloquei também a parte prática com exemplos. Usei esta página para colocar meus conhecimentos em Reactive Forms e pretendo colocar todos meus conhecimentos de Angular inicialmente.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Link de meu artigo sobre o site no linkedin:
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+https://www.linkedin.com/posts/ricardo-s-rocker_angular-developer-programacao-activity-7029403347115749377-31xD?utm_source=share&utm_medium=member_desktop
