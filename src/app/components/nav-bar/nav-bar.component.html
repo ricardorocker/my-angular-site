@@ -1,6 +1,5 @@
 <div [ngClass]="{ 'not-home': this.router.url !== '/' }" class="home">
-  <!-- <div class="banner" style="height: 500px; background-image: url('../../../assets/banner.jpg');"> -->
-  <div [ngClass]="{ 'banner-not-home': this.router.url !== '/' }" class="banner">
+  <div [ngClass]="{ 'banner-not-home': this.router.url !== '/' }" class="banner" style="background-image: url(../../../assets/back-home.jpg)">
     <div *ngIf="this.router.url === '/'" class="logo" style="background-image: url('../../../assets/profile.jpg');"
       routerLink="/experience">
     </div>

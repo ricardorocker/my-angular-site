@@ -15,7 +15,9 @@
   background-size: cover;
   position: relative;
   height: 500px;
-  background-color: #20474c;
+  /* background-image: url("https://images.unsplash.com/photo-1562907550-096d3bf9b25c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80"); */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .banner-not-home {
@@ -32,11 +34,13 @@ h1 {
   font-size: 2.75rem;
   font-weight: 900;
   letter-spacing: 0.4rem;
+  text-shadow: 1px 1px 1px #2b2b2b;
 }
 
 h3 {
   font-size: 1.4rem;
   letter-spacing: 0.15rem;
+  text-shadow: 1px 1px 1px #2b2b2b;
 }
 
 .logo {
@@ -46,7 +50,6 @@ h3 {
   background-size: cover;
   border-radius: 50%;
   margin-bottom: 20px;
-  box-shadow: 3px 3px #ffffff;
   animation: shadowAppear 2s ease-in-out infinite;
 }
 
@@ -57,30 +60,27 @@ h3 {
 }
 
 .navbar {
-  /* background-color: transparent;   */
-  background-color: #20474c;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
   position: absolute;
   top: 0;
-  left: 0;
   padding: 20px;
   z-index: 999;
 }
 
 .navbar-brand {
   font-size: 22px;
+  margin-right: 100px;
+  text-shadow: 1px 1px 1px #2b2b2b;
 }
 
 .nav-item {
   font-size: 16px;
   text-transform: uppercase;
+  text-shadow: 1px 1px 1px #2b2b2b;
 }
 
 .nav-item:hover {
   border-radius: 5%;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .banner-nav-buttons {
@@ -101,7 +101,7 @@ h3 {
   font-size: 24px;
   line-height: 56px;
   text-align: center;
-  margin: 0 8px;
+  margin: 0 21px;
   z-index: 500;
 }
 
@@ -112,26 +112,40 @@ h3 {
   }
 
   to {
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
   }
 }
 
 @media (max-width: 992px) {
+  .home {
+    margin-bottom: 20px;
+  }
+
   .navbar {
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
+    background-color: black;
   }
 
   .navbar-nav {
     flex-direction: column;
     align-items: center;
-    background-color: #20474c;
     border-radius: 2%;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
   }
 
   .nav-link {
     padding: 20px;
+  }
+
+  .navbar-toggler {
+    border-style: none;
+  }
+
+  .logo {
+    margin-top: 20px;
+    animation: none;
   }
 }
