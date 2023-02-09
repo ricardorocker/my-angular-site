@@ -1,92 +1,137 @@
-.navbar-container {
-  position: fixed;
-  width: 240px;
-  height: 100%;
+.home {
+  height: 500px;
+}
+
+.not-home {
+  height: 80px;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 500px;
+  background-color: #20474c;
+}
+
+.banner-not-home {
+  height: 80px;
+}
+
+.title {
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 2.75rem;
+  font-weight: 900;
+  letter-spacing: 0.4rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  letter-spacing: 0.15rem;
+}
+
+.logo {
+  width: 180px;
+  height: 180px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  box-shadow: 3px 3px #ffffff;
+  animation: shadowAppear 2s ease-in-out infinite;
+}
+
+.logo:hover {
+  width: 190px;
+  height: 190px;
+  cursor: pointer;
+}
+
+.navbar {
+  /* background-color: transparent;   */
+  background-color: #20474c;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  position: absolute;
   top: 0;
   left: 0;
-  padding-top: 20px;
-  text-align: center;
-  background-color: #20474c;
-  color: #fff;
-  box-shadow: -1px -2px 15px 0px rgba(0, 0, 0, 50%);
+  padding: 20px;
   z-index: 999;
 }
 
-.navbar-profile-image {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: 0 auto;
+.navbar-brand {
+  font-size: 22px;
 }
 
-.navbar-profile-image img {
+.nav-item {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.nav-item:hover {
+  border-radius: 5%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.banner-nav-buttons {
+  position: absolute;
+  top: 472px;
+  /* 500px - metade de 56px */
+  left: 0;
   width: 100%;
-  height: auto;
+  padding: 0px;
+  text-align: center;
 }
 
-.navbar-description-profile {
-  padding: 30px 0;
+.btn-circle {
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  font-size: 24px;
+  line-height: 56px;
+  text-align: center;
+  margin: 0 8px;
+  z-index: 500;
 }
 
-.navbar-name {
-  font-size: 1.8em;
-  font-weight: bold;
-}
 
-.navbar-role {
-  font-weight: lighter;
-  font-size: 1.1em;
-}
-
-ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.navbar-item {
-  padding: 8px 0;
-  font-size: 1.1em;
-  margin-bottom: 5px;
-}
-
-.navbar-item a {
-  text-decoration: none;
-  color: #fff;
-  display: block;
-}
-
-/* TODO: Mudar para m-w:750px e criar lógica de icones */
-@media (max-width: 750px) {
-  .navbar-container {
-    width: 80px;
+@keyframes shadowAppear {
+  from {
+    box-shadow: none;
   }
 
-  .navbar-profile-image {
-    width: 70px;
-    height: 70px;
+  to {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
   }
 
-  .navbar-description-profile {
-    padding: 15px 0px 30px 0px;
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    background-color: #20474c;
+    border-radius: 2%;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
   }
 
-  .navbar-name {
-    font-size: 1em;
-    padding-bottom: 10px;
-    text-transform: uppercase;
-  }
-
-  .navbar-role {
-    font-size: 0.7em;
-  }
-
-  .navbar-item {
-    padding: 8px 2px;
-    font-size: 0.7em;
-  }
-
-  .icons {
-    max-width: 30px;
+  .nav-link {
+    padding: 20px;
   }
 }
