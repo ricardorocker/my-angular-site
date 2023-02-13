@@ -1,7 +1,8 @@
-import { ReactiveFormsComponent } from './views/projects/reactive-forms/reactive-forms.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { ReactiveFormsComponent } from './views/projects/reactive-forms/reactive-forms.component';
+import { GithubComponent } from './views/projects/github/github.component';
 import { ContactComponent } from './views/contact/contact.component';
 import { EducationComponent } from './views/education/education.component';
 import { SkillsComponent } from './views/skills/skills.component';
@@ -16,9 +17,9 @@ const routes: Routes = [
   { path: 'experience', component: ExperienceComponent },
   {
     path: 'projects', component: ProjectsComponent, children: [
-      { path: 'reactive-forms', component: ReactiveFormsComponent }
+      { path: 'reactive-forms', component: ReactiveFormsComponent },
+      { path: 'github', component: GithubComponent }
     ]
-
   },
   { path: 'skills', component: SkillsComponent },
   { path: 'education', component: EducationComponent },

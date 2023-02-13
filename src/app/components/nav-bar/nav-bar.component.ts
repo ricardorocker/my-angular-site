@@ -15,7 +15,7 @@ export class NavBarComponent {
     { route: '/', name: 'Home', icon: '../../../assets/home.png' },
     // { route: '/about', name: 'About', icon: '../../../assets/about.png' },
     { route: '/experience', name: 'Experience', icon: '../../../assets/experience.png' },
-    { route: '/projects/reactive-forms', name: 'Studies', icon: '../../../assets/project.png' },
+    { route: '/projects', name: 'Studies', icon: '../../../assets/project.png' },
     { route: '/skills', name: 'Skills', icon: '../../../assets/skills.png' },
     { route: '/education', name: 'Education', icon: '../../../assets/education.png' },
     { route: '/contact', name: 'Contact', icon: '../../../assets/contact.png' },
