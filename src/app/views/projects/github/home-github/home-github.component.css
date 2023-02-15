@@ -1,0 +1,40 @@
+h1 {
+  font-weight: 500;
+  font-size: 80px;
+}
+
+.primary {
+  text-shadow:
+    -1px -1px 0px #000000,
+    -1px 1px 0px #000000,
+    1px -1px 0px #000000,
+    1px 0px 0px #000000;
+}
+
+.secondary {
+  text-shadow:
+    -1px -1px 0px #000000,
+    -1px 1px 0px #000000,
+    1px -1px 0px #000000,
+    1px 0px 0px #000000;
+}
+
+@media (max-width: 750px) {
+  h1 {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 550px) {
+  .primary {
+    text-shadow: none;
+  }
+
+  .secondary {
+    text-shadow: none;
+  }
+
+  .button{
+    display: none;
+  }
+}

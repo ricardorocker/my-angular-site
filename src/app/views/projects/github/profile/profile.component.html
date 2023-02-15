@@ -1,0 +1,46 @@
+<div class="profile-container">
+  <div class="header d-flex justify-content-center align-items-center">
+    <div class="row w-100">
+      <div class="col" style="max-width:300px; min-width: 300px;">
+        <a [routerLink]="['/projects/github']" style="text-decoration:none; color:inherit;">
+          <span class="primary">Search</span><span class="secondary"> d_evs</span>
+        </a>
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="🔍 {{ userData.name }}" (input)="search($event)">
+      </div>
+    </div>
+  </div>
+
+  <div class="body">
+    <div class="row">
+      <div class="col card-profile">
+        <app-profile-card [userData]="userData"></app-profile-card>
+      </div>
+
+      <div class="col">
+        <div class="card">
+          <div *ngFor="let repository of repositoriesFiltered">
+            <div class="card-body">
+              <h5 class="card-title text-dark">
+                <strong>
+                  <a href="{{repository.html_url}}" target="_blank" style="text-decoration:none; color:inherit;">
+                    {{repository.name}}
+                  </a>
+                </strong>
+              </h5>
+              <p class="card-text">{{repository.description}}</p>
+              <p class="card-text">
+                <fa-icon class="github-project" [icon]="faStar"></fa-icon>
+                {{repository.stargazers_count}} <span class="dot"> ● </span> <span>Atualizado há {{
+                  daysAgo(repository.pushed_at) }} dias</span>
+                <!-- TODO: Veririfcar pq updated_at esta vindo errado no github -->
+              </p>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

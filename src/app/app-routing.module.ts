@@ -1,3 +1,5 @@
+import { ProfileComponent } from './views/projects/github/profile/profile.component';
+import { HomeGithubComponent } from './views/projects/github/home-github/home-github.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -18,7 +20,8 @@ const routes: Routes = [
   {
     path: 'projects', component: ProjectsComponent, children: [
       { path: 'reactive-forms', component: ReactiveFormsComponent },
-      { path: 'github', component: GithubComponent }
+      { path: 'github', component: HomeGithubComponent },
+      { path: 'perfil-github', component: ProfileComponent }
     ]
   },
   { path: 'skills', component: SkillsComponent },

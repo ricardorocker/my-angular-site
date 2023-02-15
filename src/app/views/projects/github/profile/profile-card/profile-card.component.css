@@ -1,0 +1,63 @@
+.profile-container {
+  min-width: 280px;
+  max-width: 280px;
+}
+
+.card-header {
+  border: none;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.login {
+  color: #A0AEC0;
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+.card-body-itens {
+  font-weight: normal;
+}
+
+.card-footer {
+  background-color: #FCFCFC;
+  border: none;
+}
+
+@media (max-width: 700px) {
+  .profile-container {
+    width: 100%;
+    min-width: none;
+    max-width: none;
+  }
+
+  .col-md-8 {
+    width: 70%;
+  }
+
+  .col-md-4 {
+    width: 30%;
+  }
+
+  .col-md-10 {
+    width: 83%;
+  }
+
+  .col-md-2 {
+    width: 17%;
+  }
+}
+
+@media (max-width: 550px) {
+  button {
+    display: none;
+  }
+
+  .profile-container {
+    min-width: 350px;
+    max-width: 550px;
+  }
+}

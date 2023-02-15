@@ -1,0 +1,99 @@
+<div class="profile-container w-100">
+  <div class="card">
+    <div class="card-header bg-white">
+      <div class="row mb-3">
+        <div class="col-md-4 d-flex align-items-center" style="width: 30%;">
+          <img src="{{ userData.avatar_url }}" class="rounded-circle img-fluid" width="55" height="55" />
+        </div>
+        <div class="col-md-8">
+          <h4 class="text-dark">{{ userData.name }}</h4>
+          <h6 class="login">@{{ userData.login }}</h6>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-md-12">
+          {{ userData.bio }}
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="row mb-2" *ngIf="userData.followers">
+        <div class="col-md-2">
+          <fa-icon class="github-project" [icon]="faUsers"></fa-icon>
+        </div>
+        <div class="col-md-10">
+          <h6 class="card-body-itens">
+            {{ userData.followers }}
+            Seguidores
+          </h6>
+        </div>
+      </div>
+      <div class="row mb-4" *ngIf="userData.following">
+        <div class="col-md-2">
+          <fa-icon class="github-project" [icon]="faUserPlus"></fa-icon>
+        </div>
+        <div class="col-md-10">
+          <h6 class="card-body-itens">
+            {{ userData.following }}
+            Seguindo
+          </h6>
+        </div>
+      </div>
+      <div class="row mb-2" *ngIf="userData.company">
+        <div class="col-md-2">
+          <fa-icon class="github-project" [icon]="faBuilding"></fa-icon>
+        </div>
+        <div class="col-md-10">
+          <h6 class="card-body-itens">
+            {{ userData.company }}
+          </h6>
+        </div>
+      </div>
+      <div class="row mb-2" *ngIf="userData.location">
+        <div class="col-md-2">
+          <fa-icon class="github-project" [icon]="faMapMarkedAlt"></fa-icon>
+        </div>
+        <div class="col-md-10">
+          <h6 class="card-body-itens">
+            {{ userData.location }}
+          </h6>
+        </div>
+      </div>
+      <div class="row mb-2" *ngIf="userData.email">
+        <div class="col-md-2">
+          <fa-icon class="github-project" [icon]="faEnvelope"></fa-icon>
+        </div>
+        <div class="col-md-10" *ngIf="userData.email">
+          <h6 class="card-body-itens">
+            {{ userData.email }}
+          </h6>
+        </div>
+      </div>
+      <div class="row mb-2" *ngIf="userData.blog">
+        <div class="col-md-2">
+          <fa-icon class="github-project" [icon]="faGlobe"></fa-icon>
+        </div>
+        <div class="col-md-10">
+          <h6 class="card-body-itens">
+            {{ userData.blog }}
+          </h6>
+        </div>
+      </div>
+      <div class="row mb-2" *ngIf="userData.twitter_username">
+        <div class="col-md-2">
+          <fa-icon class="github-project" [icon]="faTwitter"></fa-icon>
+        </div>
+        <div class="col-md-10">
+          <h6 class="card-body-itens">
+            @{{ userData.twitter_username }}
+          </h6>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer" *ngIf="userData.blog">
+      <a href="{{userData.blog}}" target="_blank" style="text-decoration:none; color:inherit;">
+        <button type="button" class="btn btn-default w-100 mt-4">Contato</button>
+      </a>
+    </div>
+  </div>
+</div>

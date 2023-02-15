@@ -1,0 +1,74 @@
+.profile-container {
+  background-color: #FCFCFC;
+  color: #4A5568;
+}
+
+.header {
+  height: 88px;
+  background-color: #FFF;
+  padding: 0 80px;
+}
+
+input::placeholder {
+  color: rgb(160, 160, 160);
+}
+
+.form-control {
+  width: 80%;
+}
+
+.primary,
+.secondary {
+  font-size: 32px;
+}
+
+.body {
+  padding: 80px;
+}
+
+.card-profile {
+  max-width: 320px;
+}
+
+.dot {
+  color: #4A5568;
+  font-size: 10px;
+  padding: 6px 4px;
+}
+
+hr {
+  color: #919191;
+  margin: 0 20px;
+}
+
+@media (max-width: 850px) {
+  .form-control {
+    width: 100%;
+    min-width: 194px;
+  }
+}
+
+@media (max-width: 700px) {
+  .col {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .body {
+    padding: 0;
+  }
+
+  .col {
+    width: 100%;
+  }
+
+  input {
+    display: none;
+  }
+
+  .header {
+    text-align: center;
+  }
+}

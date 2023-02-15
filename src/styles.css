@@ -48,6 +48,49 @@
   cursor: pointer;
 }
 
+/* start gitHub Project -------------------------------------------------------- */
+.primary {
+  color: #0069CA;
+}
+
+.secondary {
+  color: #8C19D2;
+}
+
+.btn-default {
+  background-color: #8C19D2;
+  color: #fff;
+  width: 176px;
+  height: 48px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.btn-default:hover {
+  background-color: #0b5d64;
+  color: #fff;
+}
+
+.form-control {
+  min-height: 48px;
+  font-size: 18px;
+}
+
+.github-project {
+  color: #8d99ac;
+}
+
+.card {
+  border: none;
+}
+
+@media (max-width: 850px) {
+  .btn-default {
+    max-width: 130px;
+  }
+}
+/* end gitHub Project -------------------------------------------------------- */
+
 
 @media (max-width: 750px) {
   .default-component {
