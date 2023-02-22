@@ -1,14 +1,34 @@
 <div class="default-component">
   <div class="title title-page">
-    Angular Studies
+    Angular Projects
   </div>
 
-  <div class="content-tex" style="margin-bottom: 30px;">
-    My studies and personal projects are concentrated here.
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let project of projects" routerLinkActive="active">
+        <h5 class="card-title  mb-3">{{project.title}}</h5>
+        <div class="card bg-light">
+          <div class="card-body">
+            <div class="video mb-3" (click)="playVideo(project.video)">
+              <img [src]="project.thumb" alt="">
+              <!-- TODO: Implementar -->
+              <!-- <button class="button-play">
+                <fa-icon [icon]="playIcon" (click)="playVideo(project.video)"></fa-icon>
+              </button> -->
+            </div>
+            <p class="card-text">{{project.description}}</p>
+          </div>
+          <div class="card-footer bg-transparent">
+            <a [href]="project.link" target="_blank">
+              <button type="button" class="btn btn-secondary mt-2">
+                Go to {{project.title}}
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <button class="btn btn-secondary mx-3" routerLink="github">Search Devs</button>
-  <button class="btn btn-secondary mx-3" routerLink="reactive-forms">Reactive Forms</button>
 </div>
 
 <router-outlet></router-outlet>

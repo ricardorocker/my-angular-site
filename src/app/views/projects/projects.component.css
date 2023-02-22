@@ -1,0 +1,19 @@
+.card {
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 20px 20px 10px #666;
+}
+
+img {
+  width: 100%;
+}
+
+.button-play {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
